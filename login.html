@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        background-color: white;
+        font-family: "Nunito Sans", sans-serif;
+    }
+    .navbar-brand{
+        font-size: 2rem;
+        font-family: "Lobster", sans-serif;
+        color: black;
+    }
+    .navbar-brand:hover{
+        color: black;
+    }
+    .nav-link{
+        margin-right: 10px;
+        margin-left: 10px;
+        text-transform: uppercase;
+        color: black;
+        font-family: "Rubik", sans-serif;
+    }
+    .nav-link:hover{
+        color: black;
+    }
+    .search{
+        height: 40px;
+        width: 80%;
+        border-radius: 60px;
+        margin-right: -35px;
+        outline: none;
+        border: 2px solid lightcoral;
+        font-family: "Rubik", sans-serif;
+    }
+    .btn0{
+        height: 40px;
+        width: 40%;
+        outline: none;
+        border: none;
+        border-radius: 60px;
+        background-color: lightcoral;
+        color: white;
+        font-weight: 700;
+    }
+    .Forget a{
+        text-decoration: none;
+    }
+    .Forget a:hover{
+        text-decoration: underline;
+    }
+    .bg-holder{
+        width: 100%;
+        height: 85vh; /* Ensure it covers the full viewport height */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 20px;
+    }
+    .btn1{
+        color: lightgray;
+        border-color:whitesmoke ;
+    }
+    .btn1:hover{
+        color: gray;
+        border-color: whitesmoke;
+        background-color: lightblue;
+    }
+    .btn{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .divider-content-centre{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        padding:0px 10px;
+    }
+    .divider{
+        margin: 10px 0;
+    }
+    .flip-vertical-bck:hover{
+	-webkit-animation: flip-vertical-bck 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-vertical-bck 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+    @-webkit-keyframes flip-vertical-bck {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-260px) rotateY(-180deg);
+            transform: translateZ(-260px) rotateY(-180deg);
+  }
+}
+@keyframes flip-vertical-bck {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-260px) rotateY(-180deg);
+            transform: translateZ(-260px) rotateY(-180deg);
+  }
+}
+
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">Organic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav m-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tranding">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#organic">Organic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" target="_blank">Login</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Include Bootstrap JS at the end of the body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-gXW5BzBcI2gjFr2pBdICDoOHjSbqV+p1yKJp6ChmkTt+l3hZ9DLo8s66tK7OPrm2" crossorigin="anonymous"></script>
+    
+    <div class="row vh-90 g-0">
+        <div class="col-lg-6 d-none position-relative d-lg-block justify-content-center">
+            <div class="bg-holder flip-vertical-bck" style="background-image: url('/images/lunch-box.jpg');">
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="row align-items-center justify-content-center text-center h-100 g-0 px-sm-0 px-4">
+                <div class="col-sm-6 col-lg-7">
+                    <a href="#" class="justify-content-centre mb-4 "><img src="/images/organic.jpeg" alt="" width="30"></a>
+                    <div class="text-centre">
+                        <h2 class="fw-200">Login</h2>
+                        <h6 class="text-secondary">Get access To Your Account</h6>
+                    </div>
+                    <button class="btn btn-outline-secondary btn1 mb-3 w-100"><i class="fa-brands fa-google me-1 text-danger"></i>Login with Google</button>
+                    <button class="btn btn-outline-secondary btn1 mb-3 w-100"><i class="fa-brands fa-facebook me-1 text-primary"></i>Login with facebook</button>
+                    <div class="position-relative">
+                        <hr class="text-secondary divider mb-4">
+                        <div class="divider-content-centre">Or</div>
+                    </div>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" placeholder="Username" class="form-control form-control-lg fs-5">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" placeholder="Password" class="form-control form-control-lg fs-5">
+                        </div>
+                        <div class="input-group mb-3 justify-content-between">
+                            <div class="form-check">
+                                <input type="checkbox" name="" id="formcheck" class="form-check-input">
+                                <label for="formcheck" class="form-check-label text-secondary fs-6" >Remember Me</label>
+                            </div>
+                            <div class="Forget">
+                                <a href="#" class="fs-6">Forget Password?</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg w-100 mb-3">Login</button>
+                    </form>
+                    <div class="text-center">
+                        <p class="text-secondary fs-6">Don't have an account?<a href="#" class="fw-bold">sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
