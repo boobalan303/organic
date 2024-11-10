@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Organic</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <style>
@@ -80,6 +82,20 @@
         background-color: red;
         transform: 0.5s;
     }
+    .btn3{
+        height: 40px;
+        width: 40%;
+        border: none;
+        outline: none;
+        background-color: lightcoral;
+        border-radius: 60px;
+        color: white;
+        font-weight: 500;
+    }
+    .btn3:hover{
+        background-color: red;
+        transform: 0.5s;
+    }
     h1{
         font-weight: 700;
     }
@@ -90,7 +106,7 @@
         transition: 0.5s;
     }
     .apple{
-        background-image:url(images/smile\ apple.jpg);
+        background-image:url("images/smile\ apple.jpg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         height: 80vh;
@@ -164,6 +180,12 @@
                 <a class="nav-link " href="#contact">contact us</a>
               </li>
               <li class="nav-item">
+                <a href="cart.html" class="nav-link cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </a>              
+            </li>
+              <li class="nav-item">
                 <a class="nav-link " href="login.html">Login</a>
               </li>
             </ul>
@@ -225,6 +247,8 @@
                         </div>
                         <h6>Green beans</h6>
                         <p>₹250.50</p>
+                        <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                        <button class="btn3">Buy now</button>
                     </div>
                     <div class="col-lg-3 text-center">
                         <div class="card border-0 bg-light mb-3">
@@ -234,6 +258,8 @@
                         </div>
                         <h6>Milk</h6>
                         <p>₹25.50</p>
+                        <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                        <button class="btn3">Buy now</button>
                     </div>
                     <div class="col-lg-3 text-center">
                         <div class="card border-0 bg-light mb-3">
@@ -243,6 +269,8 @@
                         </div>
                         <h6>Green beans</h6>
                         <p>₹250.50</p>
+                        <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                        <button class="btn3">Buy now</button>
                     </div>
                     <div class="col-lg-3 text-center">
                         <div class="card border-0 bg-light mb-3">
@@ -252,9 +280,11 @@
                         </div>
                         <h6>Milk</h6>
                         <p>₹25.50</p>
+                        <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                        <button class="btn3">Buy now</button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row py-3">
                     <div class="col lg-6 m-auto text-center">
                         <button class="btn1">Click For More</button>
                     </div>
@@ -313,6 +343,8 @@
                     </div>
                     <h6>Green beans</h6>
                     <p>₹250.50</p>
+                    <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -322,6 +354,8 @@
                     </div>
                     <h6>Milk</h6>
                     <p>₹25.50</p>
+                    <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -331,6 +365,8 @@
                     </div>
                     <h6>Green beans</h6>
                     <p>₹250.50</p>
+                    <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -340,6 +376,8 @@
                     </div>
                     <h6>Milk</h6>
                     <p>₹25.50</p>
+                    <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
             </div><div class="row">
                 <div class="col-lg-3 text-center">
@@ -350,6 +388,8 @@
                     </div>
                     <h6>Green beans</h6>
                     <p>₹250.50</p>
+                    <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -359,6 +399,8 @@
                     </div>
                     <h6>Milk</h6>
                     <p>₹25.50</p>
+                    <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -368,6 +410,8 @@
                     </div>
                     <h6>Green beans</h6>
                     <p>₹250.50</p>
+                    <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -377,6 +421,8 @@
                     </div>
                     <h6>Milk</h6>
                     <p>₹25.50</p>
+                    <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
             </div><div class="row">
                 <div class="col-lg-3 text-center">
@@ -387,6 +433,8 @@
                     </div>
                     <h6>Green beans</h6>
                     <p>₹250.50</p>
+                    <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -396,6 +444,8 @@
                     </div>
                     <h6>Milk</h6>
                     <p>₹25.50</p>
+                    <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -405,6 +455,8 @@
                     </div>
                     <h6>Green beans</h6>
                     <p>₹250.50</p>
+                    <button class="btn3 add-to-cart" data-name="green beans" data-price="250.50" data-img="images/green beans.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
                 <div class="col-lg-3 text-center">
                     <div class="card border-0 bg-light mb-3">
@@ -414,6 +466,8 @@
                     </div>
                     <h6>Milk</h6>
                     <p>₹25.50</p>
+                    <button class="btn3 add-to-cart" data-name="Milk" data-price="25.50" data-img="images/milk.jpg">Add to Cart</button>
+                    <button class="btn3">Buy now</button>
                 </div>
             </div>
         </div>
@@ -460,19 +514,21 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="row">
+                                <form action="" class="form">
                                 <div class="col-lg-6 py-3">
-                                    <input type="text" class="form-control bg-light" placeholder="First Name">
+                                    <input type="text" class="form-control bg-light" placeholder="First Name" required pattern="[A-Z]">
                                 </div>
                                 <div class="col-lg-6 py-3">
-                                    <input type="text" class="form-control bg-light" placeholder="Last Name">
+                                    <input type="text" class="form-control bg-light" placeholder="Last Name" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 py-3">
-                                    <textarea name="" class="form-control bg-light" placeholder="Enter Your Comments" id="" cols="30" rows="5"></textarea>
+                                    <textarea style="resize: none;" name="" class="form-control bg-light" placeholder="Enter Your Comments" id="" cols="30" rows="4" required minlength="30"></textarea>
                                 </div>
                             </div>
-                            <button class="btn1">Submit</button>
+                            <button class="btn1" type="submit">Submit</button>
+                        </form>
                         </div>
                     </div>     
                 </div>
@@ -486,8 +542,8 @@
             <div class="row py-5">
                 <div class="col-lg-9 m-auto text-center">
                     <h1>Join Our Secret Society</h1>
-                    <input type="email" class="px-3" placeholder="Enter Your Email">
-                    <button class="btn2">Submit</button>
+                    <input type="email" class="px-3" placeholder="Enter Your Email" required>
+                    <button class="btn2" type="submit">Submit</button>
                 </div>
             </div>
             <div class="row">
@@ -524,12 +580,50 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center">copyrights &copy; 2024 all rights reserved. &#128520;</p>
+            <p class="text-center">rights reserved. &#128520;</p>
         </div>
     </section>
 
 
+    <script>
+       $(document).ready(function() {
+    // Function to update the cart badge with the number of items
+    function updateCartBadge() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let itemCount = cart.reduce((total, item) => total + item.quantity, 0); // Calculate total quantity
+        $('#cart-badge').text(itemCount);
+    }
 
+    // Add to Cart functionality
+    $('.add-to-cart').on('click', function() {
+        const name = $(this).data('name');
+        const price = parseFloat($(this).data('price'));
+
+        // Retrieve cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if item is already in the cart
+        let item = cart.find(item => item.name === name);
+        if (item) {
+            // If item exists, increase quantity
+            item.quantity += 1;
+        } else {
+            // If item doesn't exist, add it to the cart with quantity 1
+            cart.push({ name, price, quantity: 1 });
+        }
+
+        // Save the updated cart to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Update the cart badge
+        updateCartBadge();
+    });
+
+    // Update the cart badge when the page loads
+    updateCartBadge();
+});
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

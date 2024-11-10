@@ -186,13 +186,13 @@
                             <span class="input-group-text">
                                 <i class="fa-solid fa-user"></i>
                             </span>
-                            <input type="text" placeholder="Username" class="form-control form-control-lg fs-5">
+                            <input type="text" placeholder="Username" class="form-control form-control-lg fs-5" required pattern="[A-Z a-z]{5,}">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">
                                 <i class="fa-solid fa-lock"></i>
                             </span>
-                            <input type="password" placeholder="Password" class="form-control form-control-lg fs-5">
+                            <input type="password" placeholder="Password" class="form-control form-control-lg fs-5" aria-label="Password" minlength="4" maxlength="10" required>
                         </div>
                         <div class="input-group mb-3 justify-content-between">
                             <div class="form-check">
@@ -203,7 +203,7 @@
                                 <a href="#" class="fs-6">Forget Password?</a>
                             </div>
                         </div>
-                        <button class="btn btn-primary btn-lg w-100 mb-3">Login</button>
+                        <button class="btn btn-primary btn-lg w-100 mb-3" type="submit" id="#Home">Login</button>
                     </form>
                     <div class="text-center">
                         <p class="text-secondary fs-6">Don't have an account?<a href="#" class="fw-bold">sign up</a></p>
